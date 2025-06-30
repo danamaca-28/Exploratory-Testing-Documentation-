@@ -1,0 +1,165 @@
+---->Bug Report 1: Lipsa validare câmp Email în formularul Text Box 
+ID Bug: BR-001
+Prioritate: High
+Severitate: Major
+Modul: Forms > Text Box
+Platformă: Web (Chrome, Firefox)
+
+Descriere:
+Formularul permite trimiterea datelor fără a completa câmpul Email, deși acesta ar trebui să fie obligatoriu.
+
+Pași pentru reproducere:
+Accesează https://demoqa.com/text-box
+
+Completează câmpul Full Name cu un nume valid
+
+Lasă câmpul Email gol
+
+Apasă butonul Submit
+
+Rezultat așteptat:
+Formularul ar trebui să blocheze submit-ul și să afișeze un mesaj de eroare clar pentru câmpul Email.
+
+Rezultat actual:
+Formularul este trimis cu succes chiar dacă câmpul Email este gol, fără mesaje de eroare.
+
+--->Bug Report 2: Lipsa validare câmp Full Name în formularul Text Box - demoqa.com
+ID Bug: BR-002
+Prioritate: High
+Severitate: Major
+
+Descriere:
+Formularul permite trimiterea datelor fără a completa câmpul Full Name, deși acesta ar trebui să fie obligatoriu.
+
+Pași pentru reproducere:
+Accesează https://demoqa.com/text-box
+
+Lasă câmpul Full Name gol
+
+Completează un email valid
+
+Apasă Submit
+
+Rezultat așteptat:
+Formularul trebuie să afișeze un mesaj de eroare și să blocheze trimiterea.
+
+Rezultat actual:
+Formularul se trimite fără probleme chiar și cu câmpul Full Name gol.
+
+---->Bug Report 3: Lipsă mesaje de eroare și confirmare vizibilă după submit - demoqa.com
+ID Bug: BR-003
+Prioritate: Medium
+Severitate: Minor
+
+Descriere:
+După submit, nu există mesaje clare de eroare sau confirmare vizibilă pentru utilizator.
+
+Pași pentru reproducere:
+Completează formularul și apasă Submit
+
+Observă că datele apar într-un box sub formular, dar nu există mesaje de confirmare sau eroare.
+
+Rezultat așteptat:
+Mesaj clar de confirmare după submit și mesaje de eroare când datele sunt invalide.
+
+Rezultat actual:
+Doar apar datele într-un box, fără alte indicații.
+
+---->Bug Report 4: Butonul Submit nu este dezactivat când datele sunt invalide - demoqa.com
+ID Bug: BR-004
+Prioritate: Medium
+Severitate: Minor
+
+Descriere:
+Butonul Submit este activ și poate fi apăsat chiar dacă datele introduse sunt invalide sau câmpurile obligatorii sunt goale.
+
+Pași pentru reproducere:
+Accesează formularul
+
+Lasă câmpurile goale sau introdu date invalide
+
+Observă că butonul Submit este activ și permite trimiterea.
+
+Rezultat așteptat:
+Butonul Submit să fie dezactivat până când toate datele obligatorii sunt completate corect.
+
+Rezultat actual:
+Butonul este activ indiferent de validitatea datelor.
+
+---->Bug Report 5: Navigare incompletă prin tastatură și lipsă trimitere cu Enter - demoqa.com
+ID Bug: BR-005
+Prioritate: Medium
+Severitate: Minor
+
+Descriere:
+Nu poți trimite formularul apăsând tasta Enter, iar pentru submit trebuie să dai click cu mouse-ul. Navigarea cu tab funcționează pentru câmpuri, dar nu și pentru submit.
+
+Pași pentru reproducere:
+Completează câmpurile cu tastatura
+
+Încearcă să apeși Enter pentru a trimite formularul
+
+Observă că formularul nu se trimite
+
+Rezultat așteptat:
+Formularul să poată fi trimis și cu Enter, pentru accesibilitate și usability mai bună.
+
+Rezultat actual:
+Submit doar cu click, Enter nu funcționează.
+
+---->Bug Report 6: Lipsă evidențiere vizuală a câmpurilor obligatorii - demoqa.com
+ID Bug: BR-006
+Prioritate: Low
+Severitate: Minor
+
+Descriere:
+Nu există o indicare vizuală clară (ex: asterisc, culoare) pentru câmpurile obligatorii.
+
+Pași pentru reproducere:
+Accesează formularul
+
+Observă câmpurile și lipsa oricărei evidențieri pentru obligatoriu
+
+Rezultat așteptat:
+Câmpurile obligatorii să fie marcate clar pentru a ghida utilizatorul.
+
+Rezultat actual:
+Toate câmpurile arată la fel, fără diferențiere.
+
+---->Bug Report 7: Formular permite input excesiv de lung fără limitare - demoqa.com
+ID Bug: BR-007
+Prioritate: Low
+Severitate: Minor
+
+Descriere:
+Se pot introduce până la 4900 de caractere în câmpuri, fără limită impusă.
+
+Pași pentru reproducere:
+Introdu 4900 caractere în câmpul Full Name (sau alt câmp text)
+
+Apasă Submit
+
+Rezultat așteptat:
+Limită clară de caractere pentru fiecare câmp.
+
+Rezultat actual:
+Input excesiv de lung permis, risc de probleme.
+
+---->Bug Report 8: Lipsă suport pentru cititoare de ecran - demoqa.com
+ID Bug: BR-008
+Prioritate: Medium
+Severitate: Major
+
+Descriere:
+Formularul nu oferă suport pentru cititoare de ecran, afectând accesibilitatea.
+
+Pași pentru reproducere:
+Testează formularul cu un cititor de ecran
+
+Observă lipsa unor etichete sau mesaje auditive corespunzătoare
+
+Rezultat așteptat:
+Suport complet pentru cititoare de ecran pentru toate câmpurile și mesaje.
+
+Rezultat actual:
+Lipsă suport accesibilitate.
