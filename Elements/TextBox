@@ -1,0 +1,51 @@
+1. Introducere date valide și invalide
+
+| Test                                | Date introduse                               | Rezultat                 | Observații                                              |
+| ----------------------------------- | -------------------------------------------- | ------------------------ | ------------------------------------------------------- |
+| Nume foarte lung (200 cuvinte)      | Nume format din 200 cuvinte, copiat și lipit | Formular acceptă inputul | Nu există limită vizibilă pentru lungimea câmpului Nume |
+| Email incorect                      | Email scris greșit (ex: `test@`)             | Formular permite submit  | Lipsă validare pentru formatul email-ului               |
+| Fără completarea câmpului Full Name | Niciun nume introdus                         | Formular permite submit  | Lipsă validare câmp obligatoriu                         |
+| Fără completarea câmpului Email     | Niciun email introdus                        | Formular permite submit  | Lipsă validare câmp obligatoriu                         |
+| Toate câmpurile goale               | Niciun câmp completat                        | Formular permite submit  | Lipsă validare obligatorie a câmpurilor                 |
+
+2. Testare caractere speciale și lungimi
+
+| Test                                    | Date introduse                                    | Rezultat                | Observații                                |
+| --------------------------------------- | ------------------------------------------------- | ----------------------- | ----------------------------------------- |
+| Caractere speciale în câmpuri           | Exemple: `!@#$%^&*()`                             | Acceptate fără probleme | Formular nu filtrează caractere speciale  |
+| Emailuri valide, dar cu formate diverse | Ex: `nume+test@gmail.com`, `nume@sub.domeniu.com` | Acceptate fără probleme | Formaturi multiple sunt permise           |
+| Test limită maximă caractere            | Până la 4900 caractere                            | Acceptat                | Nu există limită impusă pe câmpurile text |
+
+3. Comportament după submit
+
+| Aspect                          | Observație                                                                 |
+| ------------------------------- | -------------------------------------------------------------------------- |
+| Afișare după submit             | Datele introduse apar într-un box sub formular                             |
+| Resetare box după submit        | Box-ul se resetează la următorul submit                                    |
+| Mesaj confirmare                | Nu există niciun mesaj explicit de confirmare                              |
+| Buton submit                    | Nu este dezactivat nici când datele sunt invalide sau câmpurile sunt goale |
+| Navigare între câmpuri          | Se poate face cu mouse și cu tab pe tastatură                              |
+| Submit prin Enter               | Nu funcționează; formularul se trimite doar cu click pe butonul Submit     |
+| Evidențiere câmpuri obligatorii | Lipsă evidențiere vizuală                                                  |
+| Test completare cu tastatura    | Nu poți completa și trimite doar cu tastatura (submit doar cu click)       |
+
+4. Accesibilitate
+
+| Aspect             | Observație                                                                     |
+| ------------------ | ------------------------------------------------------------------------------ |
+| Cititoare de ecran | Nu există suport pentru cititoare de ecran                                     |
+| Navigare tastatură | Funcționează tab-ul între câmpuri, dar submit-ul nu poate fi realizat cu Enter |
+
+
+Concluzii și recomandări
+
+
+Validare input: Formularul trebuie să implementeze validări pentru câmpurile obligatorii (Full Name, Email etc.) și validarea corectă a formatului email.
+
+Mesaje de eroare și confirmare: Se recomandă mesaje clare de eroare la date incorecte sau lipsă și un mesaj explicit de confirmare după submit.
+
+Accesibilitate: Este necesar suport pentru cititoare de ecran și posibilitatea de a folosi doar tastatura pentru completare și trimitere.
+
+Usability: Se recomandă dezactivarea butonului Submit când datele sunt invalide și evidențiere vizuală a câmpurilor obligatorii.
+
+Limitare caractere: Limita maximă pentru lungimea câmpurilor trebuie impusă pentru a preveni inputuri excesiv de lungi.
