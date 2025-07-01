@@ -1,0 +1,35 @@
+ Exploratory Testing - DemoQA / Elements / Checkbox
+
+https://demoqa.com/checkbox
+Verificam 
+✅ Că butonul de expand/collapse funcționează corect
+
+✅ Că putem bifa și debifa fiecare checkbox
+
+✅ Că se actualizează corect textul de sub checkboxuri ("You have selected")
+
+✅ Că toate checkboxurile copil se comportă corect când bifăm părintele
+
+✅ Că nu se întâmplă nimic ciudat dacă dăm click rapid pe mai multe (test de stabilitate UI)
+
+✅ Comportament după refresh (pierd checkboxurile starea? – da.)
+
+Ce am făcut:
+Am dat click pe butonul de expand → toate checkboxurile apar ✔️
+
+Am bifat "Home" → toate celelalte s-au bifat ✔️
+
+Am debifat "Downloads" → doar alea s-au debifat, restul ok ✔️
+
+Am testat combinații de click-uri pe checkboxuri de nivel diferit (ex: doar “Desktop”)
+
+Am încercat să dau click foarte rapid – UI-ul rezistă bine, nu s-a blocat ❄️
+
+Am dat refresh → checkboxurile nu mai păstrează selecția ❗️(expected)
+
+Observații:
+Nicio animație ciudată, UI-ul răspunde rapid
+
+Nu există validări vizibile pentru selecție – totul e pe bază de feedback vizual + text
+
+Ramane de acoperit testarea pe mobil 
