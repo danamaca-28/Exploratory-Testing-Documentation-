@@ -1,0 +1,39 @@
+Radio Button (https://demoqa.com/radio-button)
+
+Comportamentul radio button-urilor pentru întrebarea:
+"Do you like the site?"
+Opțiunile disponibile:
+
+✅ Yes
+
+🌟 Impressive
+
+❌ No (disabled – și au simțul umorului!)
+
+🔧 Funcționalitate
+Yes → Poate fi selectat. Apare mesajul: "You have selected Yes"
+
+Impressive → Funcționează la fel ca "Yes". Apare mesajul: "You have selected Impressive"
+
+No → Este dezactivat (atribut disabled prezent în HTML). Nu poate fi selectat nici cu mouse-ul, nici din consolă.
+
+🔁 Comportament la refresh
+Dacă dai refresh, selecția NU se păstrează. Totul revine la starea inițială (nimic selectat).
+
+🧪 Validări extra
+Din consola browserului (document.querySelector(...)), opțiunea "No" nu poate fi forțată, pentru că e efectiv blocată în cod prin disabled.
+
+♿ Accesibilitate
+Navigarea cu tastatura merge:
+Tab → mută focusul
+Space → selectează opțiunea
+
+📱 Responsivitate
+Pe dimensiuni mai mici (mobile), radio button-urile se așază vertical (sub formă de coloană).
+UX-ul rămâne clar și ușor de folosit.
+
+🐞 Buguri sau comportamente ciudate
+Nu au fost observate probleme sau erori.
+
+Clickul funcționează instant, mesajul apare corect.
+
