@@ -1,1 +1,53 @@
 
+Exploratory Testing - Web Tables (Add New Record)
+URL: https://demoqa.com/webtables
+Feature testată: Adăugare utilizator nou cu formularul „Add”
+
+✅ Scenariu de bază
+Click pe butonul “Add”
+
+Se deschide formularul de completare
+
+Completezi toate câmpurile:
+
+First Name
+
+Last Name
+
+Email
+
+Age
+
+Salary
+
+Department
+
+Click pe Submit
+
+Noua înregistrare apare corect în tabel
+
+🟢 All good. Totul funcționează ok.
+
+❌ Comportament la date invalide
+Email invalid (ex: „test@” sau „123”) → Formularul nu permite trimiterea
+
+Câmpuri goale → Nu poți trimite formularul
+
+Email incomplet → Apare semnul „X” în câmpul de email
+
+Email valid → apare semnul de validare (verde ✔️)
+
+Age și Salary → Acceptă doar numere. Dacă introduci litere sau caractere speciale, câmpul nu se salvează.
+
+🧭 Alte observații
+După click pe Submit:
+
+Dacă formularul e complet corect → utilizatorul este adăugat în tabel
+
+Dacă formularul nu este completat → rămâne pe aceeași pagină
+
+Uneori, după submit, apare o pagină albă (blank) → posibil bug
+
+Info logo (i) → Este afișat lângă câmpuri, dar nu face nimic la click.
+🔍 Ar putea fi o funcționalitate neimplementată sau lăsată ca placeholder vizual.
+
