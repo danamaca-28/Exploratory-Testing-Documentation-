@@ -27,7 +27,7 @@
 | Navigare între câmpuri          | Se poate face cu mouse și cu tab pe tastatură                              |
 | Submit prin Enter               | Nu funcționează; formularul se trimite doar cu click pe butonul Submit     |
 | Evidențiere câmpuri obligatorii | Lipsă evidențiere vizuală                                                  |
-| Test completare cu tastatura    | Nu poți completa și trimite doar cu tastatura (submit doar cu click)       |
+| Test completare cu tastatura    | Tab- pentru switch. space-> pentru click       |
 
 4. Accesibilitate
 
