@@ -1,0 +1,67 @@
+1. Completare formular Add
+Toate câmpurile pot fi completate corect, formularul se salvează cu succes.
+
+Nu se acceptă email invalid – apare mesaj de eroare când lipsește @ sau domeniul.
+
+Dacă la completare lipsesc câmpuri obligatorii sau e-mailul e incomplet, formularul nu se trimite.
+
+După click pe „Submit”, apare un ecran alb (❗️bug anterior – acum pare rezolvat).
+
+Dacă redeschizi formularul, datele completate anterior rămân pre-populate.
+
+2. Validări pe câmpuri
+Câmp	Observații
+First Name	Acceptă caractere speciale, maxim 25 caractere, se taie textul în plus
+Last Name	La fel ca First Name
+Email	Poți da paste cu multe caractere (testat cu 4900) – NU există limită
+Age	Acceptă doar 2 caractere numerice, nu se pot introduce litere
+Salary	Acceptă până la 10 caractere, doar numerice, inclusiv valori cu zecimale (.5)
+Department	Acceptă text liber, maxim 25 caractere
+
+3. Comportamente UI
+Formularul se poate completa 100% doar din tastatură (tab, space, enter).
+
+Dacă deschizi un formular și nu îl închizi, apoi dai din nou „Add”, cel vechi se închide și se deschide unul nou.
+
+După refresh, datele introduse dispar (nu există persistare).
+
+Iconița de info nu are nicio funcționalitate (click-ul nu face nimic).
+
+4. Comportament la paste / spații
+Poți da paste cu spații la început / sfârșit, dar valorile sunt tăiate automat.
+
+Testat cu text lung (25 caractere) – valorile sunt trunchiate fără eroare.
+
+5. Edge Cases & Limitări
+Nu poți introduce litere în Age / Salary.
+
+Email-ul se validează corect.
+
+Formularul permite adăugarea în buclă (deschizi, nu închizi, adaugi din nou).
+
+Spațiile multiple la paste sunt ignorate.
+
+Poți naviga doar cu tastatura – bun pentru accesibilitate.
+
+6. Injection Test (SQL / JS)
+Am testat următoarele valori în First Name / Last Name / Department:
+
+Robert'); DROP TABLE Students;--
+
+<script>alert("test")</script>
+
+🔍 Rezultat:
+
+Valorile au fost salvate ca text simplu – nu s-a executat niciun cod.
+
+Nu există vulnerabilitate evidentă de SQL sau JS injection în UI.
+
+Recomandare: să se testeze și cu DevTools pentru backend (dacă ar exista API-uri reale).
+
+7. Compatibilitate Browser
+Testat în Chrome, Safari – funcționează corect în ambele.
+
+Nu s-au observat diferențe majore de UI/UX.
+
+Butoanele, câmpurile și interacțiunile funcționează normal.
+
