@@ -39,15 +39,41 @@ Email valid → apare semnul de validare (verde ✔️)
 
 Age și Salary → Acceptă doar numere. Dacă introduci litere sau caractere speciale, câmpul nu se salvează.
 
+Department → Acceptă orice text. Nu există validări speciale, dar trebuie completat (obligatoriu). Dacă e gol, nu poți trimite formularul.
+
+First Name / Last Name → Acceptă caractere speciale (ex: !@#$%^ sau ăîșțâ) – nu există restricții, datele se salvează și se afișează în tabel.
+
 🧭 Alte observații
 După click pe Submit:
-
-Dacă formularul e complet corect → utilizatorul este adăugat în tabel
-
-Dacă formularul nu este completat → rămâne pe aceeași pagină
 
 Uneori, după submit, apare o pagină albă (blank) → posibil bug
 
 Info logo (i) → Este afișat lângă câmpuri, dar nu face nimic la click.
 🔍 Ar putea fi o funcționalitate neimplementată sau lăsată ca placeholder vizual.
+
+✅ Edge Cases & Observații Suplimentare – Web Tables > Add New Record
+Copy/Paste
+→ Poți da paste cu spații la început/sfârșit (ex: " John "). Se acceptă. la "age" nu se accepta spatiul la inceput 
+
+Lungime maximă input
+
+First Name, Last Name, Department → maxim ~25 caractere (la paste textul se taie automat)
+
+Email → nu pare să existe limită (testat cu peste 4900 caractere)
+
+Age → doar 2 caractere
+
+Salary → maxim 10 caractere, acceptă și valori mari
+
+Date persistente între deschideri
+Dacă începi să completezi un formular și îl închizi, datele rămân dacă redeschizi imediat (nu se resetează automat).
+
+Navigare tastatură
+Formularul poate fi completat 100% doar cu tastatura – Tab pentru mutare între câmpuri, Space pentru checkbox/butoane.
+
+Formular deschis -> dai din nou „Add”
+Dacă ai un formular deschis și apeși iar pe „Add”, se închide cel vechi și se deschide altul gol. Ce ai completat înainte rămâne în fundal (în formularul precedent), dar nu se păstrează.
+
+După refresh
+Dacă reîncarci pagina , orice dată introdusă în formular  se pierde. Se revine la starea inițială.
 
